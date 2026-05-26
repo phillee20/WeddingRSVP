@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wedding RSVP</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./rsvp.js" defer></script>
+  </head>
+  <body>
+    <main class="shell">
+      <section class="rsvp-panel" aria-labelledby="question">
+        <div class="image-panel" aria-hidden="true">
+          <div class="ring-mark"></div>
+        </div>
+
+        <form id="rsvp-form" class="form-panel">
+          <p class="eyebrow">Phil and Yuejiao Wedding RSVP</p>
+          <h1 id="question">Will you be attending?</h1>
+          <p class="subtitle">Please let us know if you can join the celebration.</p>
+
+          <label for="guest-name">Your name</label>
+          <input id="guest-name" name="guestName" autocomplete="name" placeholder="Jane Smith" required>
+
+          <label for="song-choice">Your song choice for the night</label>
+          <input id="song-choice" name="songChoice" placeholder="Your favorite dance song">
+
+          <p class="rsvp-deadline">Kindly respond by August 1.</p>
+          <div class="actions" role="group" aria-label="Attendance response">
+            <button type="submit" name="attending" value="true" class="yes-button">Yes</button>
+            <button type="submit" name="attending" value="false" class="no-button">No</button>
+          </div>
+
+          <p id="message" class="message" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

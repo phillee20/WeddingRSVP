@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Pressed flowers and wedding rings">
+  <defs>
+    <linearGradient id="linen" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f7e6df"/>
+      <stop offset="0.55" stop-color="#dfe8da"/>
+      <stop offset="1" stop-color="#f4d2c7"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.5"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="900" fill="url(#linen)"/>
+  <!-- decorative shapes removed per request -->
+  <g fill="none" stroke="#b98c4a" stroke-width="15" opacity="0.78">
+    <circle cx="560" cy="438" r="116"/>
+    <circle cx="640" cy="438" r="116"/>
+  </g>
+  <g stroke="#5d4057" stroke-linecap="round" stroke-width="7" opacity="0.38">
+    <path d="M142 758c154-110 246-242 276-396"/>
+    <path d="M1046 136c-128 111-201 244-220 399"/>
+    <path d="M742 780c-38-132-32-249 18-350"/>
+  </g>
+</svg>
