@@ -29,9 +29,8 @@ form.addEventListener("submit", async (event) => {
       throw new Error(data.error || "Unable to save your response.");
     }
 
-    message.textContent = selectedResponse
-      ? "Thank you. We are delighted you can join us."
-      : "Thank you for letting us know. You will be missed.";
+    // Unified confirmation message
+    message.textContent = "Thanks for confirming!";
     form.reset();
   } catch (error) {
     message.textContent = error.message;

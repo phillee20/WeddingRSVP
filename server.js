@@ -64,6 +64,9 @@ function sendJson(res, status, payload) {
   res.writeHead(status, {
     "Content-Type": "application/json; charset=utf-8",
     "Content-Length": Buffer.byteLength(body),
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+    "Access-Control-Allow-Headers": "Content-Type, Authorization",
   });
   res.end(body);
 }
@@ -192,6 +195,17 @@ async function handleAdmin(req, res) {
 
 const server = http.createServer(async (req, res) => {
   try {
+    if (req.method === "OPTIONS" && req.url.startsWith("/api/")) {
+      // Handle CORS preflight for API routes
+      res.writeHead(204, {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type, Authorization",
+      });
+      res.end();
+      return;
+    }
+
     if (req.method === "POST" && req.url === "/api/rsvp") {
       await handleRsvp(req, res);
       return;
