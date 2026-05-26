@@ -10,6 +10,7 @@ node server.js
 ```
 
 To publish on GitHub Pages: create a repository and push this repo, then enable Pages from the `public/` branch or use the `gh` CLI to configure.
+
 # Wedding RSVP
 
 A small dependency-free RSVP site with a private admin headcount view.
